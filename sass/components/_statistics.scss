@@ -1,0 +1,111 @@
+// Statistics
+.statistics {
+  margin-left: auto;
+  max-width: 280px;width: 100%;
+  .stars {
+    margin-bottom: 32px;
+    &__inner {
+      justify-content: space-between;
+    }
+    &__quantity {
+      font-size: $fz-18;
+      font-weight: $medium;
+    } 
+  }
+  &__list {
+    margin-bottom: 32px;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+    p {
+      color: $secondary;
+      margin-bottom: 10px;
+    }
+    &--positive {
+      .statistics__progress {
+        span {
+          background: $success;
+        }
+      }
+    }
+    &--neutral {
+      .statistics__progress {
+        span {
+          background: $warning;
+        }
+      }
+    }
+    &--negative {
+      .statistics__progress {
+        span {
+          background: $danger;
+        }
+      }
+    }
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+  &__progress {
+    height: 6px;
+    position: relative;
+    border-radius: $br-6;
+    background: $surface-primary;
+    max-width: 100%;width: 100%;
+    span {
+      position: absolute;
+      border-radius: inherit;
+      top: 0;left: 0;bottom: 0;
+    }
+  }
+  &__quantity {
+    width: 25px;
+    margin-left: 10px;
+    font-weight: $medium;
+    flex-shrink: 0;
+  }
+  &__btn {
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+// Media max
+@media (max-width: $xl) {
+  .statistics {
+    max-width: 100%;
+    margin-bottom: 32px;
+    .stars {
+      &__inner {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .statistics {
+    .stars {
+      margin-bottom: 24px;
+    }
+    &__list {
+      margin-bottom: 24px;
+    }
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+      p {
+        font-size: $fz-14;
+        margin-bottom: 8px;
+      }
+    }
+    &__quantity {
+      font-size: $fz-16;
+    }
+  }
+}

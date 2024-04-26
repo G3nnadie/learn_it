@@ -1,0 +1,90 @@
+/* Flex Class */
+.fx-column {display: -webkit-box;display: -ms-flexbox;display: flex;-ms-flex-wrap: nowrap;flex-wrap: nowrap;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
+.flex-center {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;}
+.fx-between {-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;}
+.align-start {-webkit-box-align: start;-ms-flex-align: start;align-items: flex-start;}
+.align-center {-webkit-box-align: center;-ms-flex-align: center;align-items: center;}
+.align-end {-webkit-box-align: end;-ms-flex-align: end;align-items: flex-end;}
+.fx-start {-webkit-box-pack: start;-ms-flex-pack: start;justify-content: flex-start;}
+.fx-center {-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;}
+.fx-end {-webkit-box-pack: end;-ms-flex-pack: end;justify-content: flex-end;}
+.fx {display: -webkit-box;display: -ms-flexbox;display: flex;}
+.fx-wrap {-ms-flex-wrap: wrap;flex-wrap: wrap;}
+/* Flex Class End */
+
+/* Reserved Class */
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+.symbol-rub {font-family: -apple-system,system-ui,Arial,Helvetica,sans-serif;}
+.text-crop {white-space: nowrap;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;}
+/* Reserved Class End*/
+
+body {
+  color: $primary;
+  line-height: 1.5;
+  font-size: $fz-16;
+  font-weight: $regular;
+  font-family: $font-primary;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.main {
+  padding-top: 20px;
+  flex: 1 0 auto;
+}
+
+.container {
+  min-height: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 15px;
+}
+
+.row {
+  margin-left: -4px;
+  margin-right: -4px;
+}
+.row [class*='col-'] {
+  padding: 0 4px;
+}
+
+// Media max
+@media (max-width: $lg) {
+  body {
+    font-size: $fz-13;
+  }
+}
+
+@media (max-width: $md) {
+  .container {
+    padding-top: 52px;
+    max-width: 100% !important;
+  }
+}
+
+// Media min
+@media (min-width: $min-xl) {
+  .main {
+    padding-top: 32px;
+  }
+  .container {
+    max-width: 1224px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: $min-lg) {
+  .row {
+    margin-left: -12px;
+    margin-right: -12px;
+    [class*='col-'] {
+      padding: 0 12px;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+// Courses list
+.p-courses {
+  &__head {
+    .form {
+      max-width: 100%;width: 100%;
+    }
+  }
+  &__group {
+    .type-display {
+      margin-right: 24px;
+    }
+  }
+  &__filter {
+    margin-left: 8px;
+    background: $accent;
+    border-radius: $br-12;
+    width: 48px;height: 48px;
+    flex-shrink: 0;
+    &:hover {
+      background: $accent-hover;
+    }
+    svg {
+      width: 26px;height: 26px;
+      path {
+        stroke: $white;
+      }
+    }
+  }
+}
+
+// Media max
+@media (max-width: $lg) {
+  .p-courses {
+    &__head {
+      flex-wrap: wrap;
+      .form {
+        margin-bottom: 8px;
+      }
+      .select {
+        width: 100%;
+      }
+      .nice-select {
+        height: 48px;
+        padding: 0 24px;
+        line-height: 48px;
+        border: 1px solid $stroke-hard !important;
+        box-shadow: 1px 1px 8px 1px rgba(12, 43, 90, 0.06);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:after {
+          margin-top: 2px;
+          position: static;
+          margin-left: 4px;
+          transform: translateY(0);
+          flex-shrink: 0;
+        }
+        &.open {
+          &:after {
+            transform: translateY(0) rotate(-180deg);
+          }
+        }
+        .list {
+          width: 100%;
+        }
+      }
+    }
+    &__group {
+      margin: 0;
+      max-width: calc(100% - 56px);width: 100%;
+    }
+    .catalog__group {
+      margin-top: 24px;
+    }
+  }
+}
+
+@media (max-width: $mob-x) {
+  .p-courses {
+    &__head {
+      .form {
+        .form__field {
+          input {
+            font-size: $fz-12;
+            line-height: 12px;
+          }
+          .form__name {
+            font-size: $fz-12;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media min
+@media (min-width: $min-lg) {
+  .p-courses {
+    &__group {
+      height: 72px;
+      padding: 0 24px;
+      margin-left: 13px;
+      border-radius: $br-12;
+      border: 1px solid $stroke-hard;
+      flex-shrink: 0;
+      box-shadow: 1px 1px 8px 1px rgba(12, 43, 90, 0.06);
+    }
+    &__filter {
+      width: 72px;height: 72px;
+      svg {
+        width: 30px;height: 30px;
+      }
+    }
+  }
+}

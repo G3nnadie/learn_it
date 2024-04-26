@@ -1,0 +1,14 @@
+// More
+.more {
+  margin-top: 32px;
+  .btn {
+    width: 100%;
+  }
+}
+
+// Media max
+@media (max-width: $lg) {
+  .more {
+    margin-top: 24px;
+  }
+}

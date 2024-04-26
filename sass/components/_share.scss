@@ -1,0 +1,14 @@
+// Share
+.share {
+  &__title {
+    font-size: $fz-15;
+    font-weight: $medium;
+  }
+  &__item {
+    margin-left: 12px;
+    width: 32px;height: 32px;
+    &:hover {
+      opacity: .6;
+    }
+  } 
+}

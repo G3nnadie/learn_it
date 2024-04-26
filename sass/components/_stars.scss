@@ -1,0 +1,44 @@
+// Stars
+.stars {
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__rating {
+    top: 2px;
+    margin-right: 12px;
+    font-weight: $medium;
+    font-size: $fz-18;
+    position: relative;
+  }
+  &__body {
+    position: relative;
+  }
+  &__row {
+    display: flex;
+    i {
+      width: 19px;height: 19px;
+      background: url(../img/svg/i-star-off.svg);
+      flex-shrink: 0;
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+    }
+    &--dynamic {
+      top: 0;left: 0;
+      overflow: hidden;
+      position: absolute;
+      i {
+        background: url(../img/svg/i-star-on.svg);
+      }
+    }
+  }
+  &__quantity {
+    color: $primary;
+    font-size: $fz-14;
+    margin-left: 12px;
+    &:hover {
+      color: $accent;
+    }
+  }
+}

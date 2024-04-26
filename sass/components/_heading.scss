@@ -1,0 +1,35 @@
+// Heading
+.heading {
+  margin-bottom: 20px;
+  .title {
+    padding-right: 35px;
+  }
+  &__logo {
+    max-width: 172px;
+    position: relative;
+  }
+}
+
+// Media max
+@media (max-width: $xl) {
+  .heading {
+    &__logo {
+      top: -2px;
+      max-width: 103px;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .heading {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: $md) {
+  .heading {
+    .title {
+      padding-right: 15px;
+    }
+  }
+}

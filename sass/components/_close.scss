@@ -1,0 +1,35 @@
+// Close
+.close {
+  z-index: 1;
+  position: absolute;
+  top: 20px;right: 20px;
+  width: 24px;height: 24px;
+  svg {
+    width: 100%;
+    display: block;
+    path {
+      stroke: $primary;
+      transition: all .2s;
+    }
+  }
+  &:hover {
+    svg {
+      path {
+        stroke: $accent;
+      }
+    }
+  }
+}
+
+// Media max
+@media (max-width: $md) {
+  .close {
+    top: 17px;
+  }
+}
+
+@media (max-width: $mob-x) {
+  .close {
+    top: 15px;
+  }
+}

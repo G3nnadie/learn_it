@@ -1,0 +1,43 @@
+// Pagination
+.pagination {
+  margin-top: 20px;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+  &__link {
+    color: $primary;
+    font-size: $fz-15;
+    font-weight: $medium;
+    border-radius: $br-40;
+    width: 40px;height: 40px;
+    svg {
+      width: 24px;height: 24px;
+      path {
+        stroke: $primary;
+      }
+    }
+    &:hover {
+      color: $accent;
+      svg {
+        path {
+          stroke: $accent;
+        }
+      }
+    }
+    &--active {
+      color: $white;
+      background: $primary;
+    }
+  }
+}
+
+// Media max
+@media (max-width: $mob-x) {
+  .pagination {
+    &__link {
+      width: 30px;height: 30px;
+    }
+  }
+}

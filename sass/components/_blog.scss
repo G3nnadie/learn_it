@@ -1,0 +1,139 @@
+// Blog
+.blog {
+  .tags {
+    overflow-x: initial;
+    margin-bottom: 24px;
+    &__item {
+      margin-top: 0;
+      margin-bottom: 8px;
+      a {
+        height: 44px;
+        padding: 0 24px;
+        font-size: $fz-14;
+      }
+    }
+  }
+  &__row {
+    margin-left: -30px;
+    margin-right: -30px;
+    [class*='col-'] {
+      margin-bottom: 64px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  &__item {
+    .title {
+      margin: 16px 0 0;
+      h3 {
+        line-height: 1.5;
+        a {
+          color: $primary;
+          &:hover {
+            color: $accent;
+          }
+        }
+      }
+    }
+  }
+  &__img {
+    display: block;
+    padding-bottom: 56%;
+    border-radius: $br-12;
+  }
+  &__tags {
+    margin-top: 10px;
+    line-height: 1.7;
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      color: $accent;
+      margin-top: 4px;
+      font-size: $fz-14;
+      font-weight: $medium;
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+      &:hover {
+        color: $accent-hover;
+      }
+    }
+  }
+  &__item {
+    .paragraph {
+      color: $secondary;
+      margin-top: 16px;
+      font-size: $fz-14;
+      line-height: 1.7;
+      -webkit-line-clamp: 4;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &--big {
+      .blog__img {
+        padding-bottom: 39%;
+      }
+    }
+    &--midd {
+      .blog__img {
+        padding-bottom: 46%;
+      }
+    }
+  }
+}
+
+// Media max
+@media (max-width: $xl) {
+  .blog {
+    &__img {
+      padding-bottom: 50% !important;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .blog {
+    .tags {
+      &__item {
+        a {
+          padding: 0 20px;
+        }
+      }
+    }
+    &__row {
+      margin-left: -8px;
+      margin-right: -8px;
+      [class*='col-'] {
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .blog {
+    &__item {
+      .title {
+        margin-top: 8px;
+        h3 {
+          font-size: $fz-15;
+        }
+      }
+      .paragraph {
+        margin-top: 8px;
+        font-size: $fz-12;
+        line-height: 1.66;
+      }
+    }
+    &__img {
+      padding-bottom: 60% !important;
+    }
+    &__tags {
+      margin-top: 8px;
+    }
+  }
+}

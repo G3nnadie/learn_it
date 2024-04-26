@@ -1,0 +1,38 @@
+// Tags
+.tags {
+  overflow-x: auto;
+  &__item {
+    margin-top: 8px;
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+    a {
+      height: 36px;
+      line-height: 1;
+      padding: 0 16px;
+      color: $primary;
+      font-size: $fz-15;
+      background: $white;
+      white-space: nowrap;
+      font-weight: $medium;
+      border-radius: $br-12;
+      border: 1px solid $stroke-hard;
+      display: flex;
+      align-items: center;
+      &:hover {
+        background: $stroke-hard;
+      }
+    }
+  }
+}
+
+// Media max
+@media (max-width: $lg) {
+  .tags {
+    &__item {
+      a {
+        font-size: $fz-13;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+// Type-display
+.type-display {
+  &-item {
+    width: 24px;height: 24px;
+    svg {
+      width: 100%;
+      path {
+        stroke: $secondary;
+        transition: all .2s;
+      }
+    }
+    &:hover,
+    &--active {
+      svg {
+        path {
+          stroke: $accent;
+        }
+      }
+    }
+  }
+}

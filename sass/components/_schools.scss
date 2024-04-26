@@ -1,0 +1,86 @@
+// Schools
+.schools {
+  z-index: 1;
+  color: $white;
+  margin-top: 48px;
+  position: relative;
+  background: $accent;
+  border-radius: $br-40;
+  padding: 46px 73px 43px;
+  &:after {
+    z-index: -1;
+    pointer-events: none;
+    border-radius: inherit;
+    @include pseudo-elements;
+    top: 0;left: 0;right: 0;bottom: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0.58%, rgba(255, 255, 255, 0.2) 100%), #3286EE;
+  }
+  &__box {
+    max-width: 500px;width: 100%;
+  }
+  .title {
+    margin-bottom: 24px;
+  }
+  &__btn {
+    margin-top: 24px;
+  }
+  &__img {
+    position: absolute;
+    pointer-events: none;
+    top: -23px;right: -9px;
+    width: 628px;height: 468px;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+// Media max
+@media (max-width: $xl) {
+  .schools {
+    padding: 40px 30px;
+    &__box {
+      max-width: 400px;
+    }
+    &__img {
+      top: -15px;
+      width: 500px;
+      height: 373px;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .schools {
+    margin-top: 32px;
+    border-radius: $br-20;
+    padding: 24px 16px 0;
+    &__box {
+      max-width: 100%;
+    }
+    .title {
+      margin-bottom: 16px;
+    }
+    &__btn {
+      margin-top: 16px;
+    }
+    &__img {
+      height: auto;
+      position: static;
+      margin: -35px auto 0;
+      transform: translateY(55px);
+      max-width: 500px;width: 100%;
+    }
+  }
+}
+
+@media (max-width: $mob) {
+  .schools {
+    &__img {
+      max-width: 320px;
+      margin-top: -20px;
+      transform: translateY(37px);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// Paragraph
+.paragraph {
+  line-height: 1.75;
+  p+p {
+    margin-top: 30px;
+  }
+}
+
+// Media max
+@media (max-width: $lg) {
+  .paragraph {
+    line-height: 1.84;
+  }
+}

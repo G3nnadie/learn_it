@@ -1,0 +1,57 @@
+// Range
+.range {
+  .irs--flat {
+    margin-top: 20px;
+  }
+  .irs-min,
+  .irs-max {
+    display: none;
+  }
+  .irs--flat .irs-line,
+  .irs--flat .irs-bar {
+    height: 4px;
+    border-radius: $br-4;
+  }
+  .irs--flat .irs-line {
+    background: $stroke-hard;
+  }
+  .irs--flat .irs-bar {
+    background: $accent;
+  }
+  .irs--flat .irs-handle {
+    top: 17px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: $accent;
+    width: 20px;height: 20px;
+    > i:first-child {
+      top: 50%;
+      margin: 0;
+      border-radius: 50%;
+      background: $white;
+      width: 8px;height: 8px;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .irs--flat .irs-from,
+  .irs--flat .irs-to,
+  .irs--flat .irs-single {
+    top: -7px;
+    line-height: 1;
+    color: $primary;
+    font-size: $fz-14;
+    background: transparent;
+  }
+  .irs--flat .irs-from:before,
+  .irs--flat .irs-to:before,
+  .irs--flat .irs-single:before {
+    display: none;
+  }
+  &--2 {
+    .irs-from {
+      span {
+        display: none;
+      }
+    }
+  }
+}

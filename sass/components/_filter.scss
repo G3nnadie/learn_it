@@ -1,0 +1,91 @@
+// Filter
+.filter {
+  margin-left: auto;
+  max-width: 240px;width: 100%;
+  &__head {
+    height: 54px;
+    margin: 0 -20px;
+    padding: 0 20px;
+    font-size: $fz-15;
+    position: relative;
+    margin-bottom: 20px;
+    font-weight: $medium;
+    border-top: 1px solid $stroke-hard;
+    border-bottom: 1px solid $stroke-hard;
+  }
+  &__close {
+    position: absolute;
+    top: 50%;right: 20px;
+    width: 24px;height: 24px;
+    transform: translateY(-50%);
+    svg {
+      width: 100%;
+      path {
+        stroke: $primary;
+        transition: all .2s;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          stroke: $accent;
+        }
+      }
+    }
+  }
+  &__inner {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid $stroke-hard;
+    }
+  }
+  &__title {
+    font-weight: $medium;
+    margin-bottom: 12px;
+  }
+  &__bott {
+    margin-top: 36px;
+    .btn {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+// Media max
+@media (max-width: $xl) {
+  .filter {
+    z-index: 55;
+    width: 300px;
+    position: fixed;
+    overflow-y: auto;
+    background: $white;
+    max-width: initial;
+    padding: 0 20px 15px;
+    top: 0;right: 0;bottom: 0;
+    transform: translateX(100%);
+    transition: ease-in-out .3s;
+    &--open {
+      transform: translateX(0);
+    }
+    &__inner {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+      }
+    }
+    &__title {
+      font-size: $fz-16;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .filter {
+    top: 51px;
+    width: 100%;
+    z-index: 50;
+  }
+}

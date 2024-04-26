@@ -1,0 +1,49 @@
+// Check
+.check {
+  input {
+    display: none;
+  }
+  &__item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    &+& {
+      margin-top: 12px;
+    }
+  }
+  &__mark {
+    margin-right: 12px;
+    position: relative;
+    border-radius: $br-3;
+    width: 24px;height: 24px;
+    border: 1px solid $stroke-hard;
+    flex-shrink: 0;
+    &:before {
+      opacity: 0;
+      @include pseudo-elements;
+      top: 0;left: 0;right: 0;bottom: 0;
+      background: url(../img/svg/i-check.svg) center/12px no-repeat;
+      transition: inherit;
+    }
+  }
+  &__text {
+    color: $secondary;
+    font-size: $fz-14;
+    line-height: 1.714;
+    a {
+      color: $accent;
+      &:hover {
+        color: $accent-hover;
+      }
+    }
+  }
+  &__item {
+    input[type="checkbox"]:checked + span {
+      background: $accent;
+      border-color: $accent;
+    }
+    input[type="checkbox"]:checked + span:before {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+// Interesting
+.interesting {
+  padding-top: 64px;
+}
+
+// Media max
+@media (max-width: $lg) {
+  .interesting {
+    padding-top: 36px;
+    &__sl {
+      .blog__item {
+        width: 280px;
+      }
+    }
+  }
+}

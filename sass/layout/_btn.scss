@@ -1,0 +1,67 @@
+// Btn
+.btn {
+  height: 44px;
+  padding: 0 24px;
+  font-size: $fz-15;
+  text-align: center;
+  position: relative;
+  font-weight: $medium;
+  border-radius: $br-12;
+  font-family: $font-primary;
+  svg {
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+  svg, svg path {
+    transition: inherit;
+  }
+  &--big {
+    height: 49px;
+  }
+  &--primary {
+    color: $white;
+    background: $accent;
+    &:hover {
+      background: $accent-hover;
+    }
+  }
+  &--secondary {
+    color: $accent;
+    background: $surface-primary;
+    &:hover {
+      color: $white;
+      background: $accent;
+      svg {
+        path {
+          stroke: $white;
+        }
+      }
+    }
+  }
+  &--stroke {
+    color: $primary;
+    background: $white;
+    border: 1px solid $stroke-hard;
+    &:hover {
+      color: $accent;
+      border-color: $accent;
+    }
+  }
+  &--arrow {
+    &:hover {
+      svg {
+        transform: translateX(7px);
+      }
+    }
+  }
+}
+
+// Media max
+@media (max-width: $lg) {
+  .btn {
+    width: 100%;
+    padding: 0 10px;
+    line-height: 1.1;
+    font-size: $fz-13;
+  }
+}

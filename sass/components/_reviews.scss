@@ -1,0 +1,169 @@
+// Reviews
+.reviews {
+  &__item {
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid $stroke-hard;
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+    .stars {
+      margin-right: 30px;
+      &__rating {
+        font-size: $fz-24;
+        line-height: normal;
+        font-weight: $semibold;
+      }
+    }
+  }
+  &__info {
+    line-height: normal;
+    strong {
+      font-weight: $medium;
+    }
+    p {
+      color: $secondary;
+      margin-left: 16px;
+      font-size: $fz-13;
+    }
+  }
+  &__body {
+    margin-top: 20px;
+  }
+  &__row {
+    margin-top: 20px;
+    span {
+      display: block;
+      color: $secondary;
+      font-size: $fz-13;
+      line-height: 1.53;
+    }
+    p {
+      margin-top: 8px;
+      font-size: $fz-14;
+      line-height: 1.714;
+    }
+  }
+  &__bott {
+    margin-top: 20px;
+    color: $secondary;
+    font-size: $fz-13;
+    line-height: 1.53;
+  }
+  &__button {
+    line-height: 1;
+    font-size: $fz-14;
+    color: $secondary;
+    margin-left: 20px;
+    font-weight: $medium;
+    font-family: $font-primary;
+    svg {
+      margin-right: 8px;
+      width: 18px;height: 18px;
+      flex-shrink: 0;
+      path {
+        fill: $secondary;
+        transition: all .2s;
+      }
+    }
+    &--active {
+      &.reviews__button--like {
+        color: $success;
+        svg {
+          path {
+            fill: $success;
+          }
+        }
+      }
+      &.reviews__button--dislike {
+        color: $danger;
+        svg {
+          path {
+            fill: $danger;
+          }
+        }
+      }
+    }
+    &--like {
+      &:hover {
+        color: $success;
+        svg {
+          path {
+            fill: $success;
+          }
+        }
+      }
+    }
+    &--dislike {
+      &:hover {
+        color: $danger;
+        svg {
+          path {
+            fill: $danger;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media max
+@media (max-width: $lg) {
+  .reviews {
+    &__item {
+      padding: 16px;
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+      .stars {
+        &__rating {
+          font-size: $fz-20;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .reviews {
+    &__item {
+      .stars {
+        margin: 0 0 8px;
+      }
+    }
+    &__info {
+      strong, p {
+        font-size: $fz-12;
+      }
+    }
+    &__body {
+      margin-top: 15px;
+    }
+    &__row {
+      margin-top: 15px;
+      span, p {
+        font-size: $fz-12;
+        line-height: 1.666;
+      }
+      p {
+        margin-top: 4px;
+      }
+    }
+    &__bott {
+      margin-top: 15px;
+      font-size: $fz-12;
+      line-height: 1.66;
+    }
+  }
+}
+
+@media (max-width: $mob-x) {
+  .reviews {
+    &__button {
+      margin-left: 10px;
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
+}

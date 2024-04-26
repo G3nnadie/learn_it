@@ -1,0 +1,48 @@
+// Switch
+.switch {
+  &__item {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    input {
+      display: none;
+      &:checked + .switch__mark {
+        background: $accent;
+      }
+      &:checked + .switch__mark:before {
+        margin-left: 15px;
+      }
+    }
+  }
+  &__text {
+    font-size: $fz-14;
+  }
+  &__mark {
+    cursor: pointer;
+    margin-left: 24px;
+    position: relative;
+    border-radius: $br-32;
+    background: $secondary;
+    width: 40px;height: 25px;
+    flex-shrink: 0;
+    &:before {
+      border-radius: 50%;
+      background: $white;
+      top: 50%;left: 5px;
+      @include pseudo-elements;
+      width: 15px;height: 15px;
+      transform: translateY(-50%);
+      transition: inherit;
+    }
+  }
+}
+
+// Media max
+@media (max-width: $xl) {
+  .switch {
+    &__item {
+      margin-top: 20px;
+    }
+  }
+}

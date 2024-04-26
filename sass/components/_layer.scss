@@ -1,0 +1,22 @@
+// Layer
+.layer {
+  z-index: 54;
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, .7);
+  top: 0;left: 0;right: 0;bottom: 0;
+}
+
+// Media mav
+@media (max-width: $md) {
+  .layer {
+    display: none !important;
+  }
+}
+
+// Media min
+@media (min-width: $min-xl) {
+  .layer {
+    display: none !important;
+  }
+}

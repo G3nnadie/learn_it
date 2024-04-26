@@ -1,0 +1,55 @@
+// Categories
+.categories {
+  padding-top: 48px;
+  .title {
+    margin-bottom: 8px;
+  }
+  .row {
+    [class*='col-'] {
+      margin-top: 24px;
+    }
+  }
+  &__item {
+    height: 80px;
+    padding: 28px;
+    color: $primary;
+    font-weight: $medium;
+    border-radius: $br-12;
+    border: 1px solid $stroke-hard;
+    &:hover {
+      background: $surface-primary;
+    }
+  }
+}
+
+// Media max
+@media (max-width: $xl) {
+  .categories {
+    &__item {
+      padding: 15px;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .categories {
+    padding-top: 32px;
+    .title {
+      margin-bottom: 16px;
+    }
+    .row {
+      [class*='col-'] {
+        margin-top: 8px;
+      }
+    }
+    &__item {
+      height: 56px;
+      padding: 12px;
+      font-size: $fz-12;
+      line-height: normal;
+    }
+    .more {
+      margin-top: 8px;
+    }
+  }
+}

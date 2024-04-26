@@ -1,0 +1,443 @@
+// Catalog
+.catalog {
+  padding-top: 80px;
+  +.catalog {
+    padding-top: 32px;
+  }
+  &__group {
+    [class*='col-'] {
+      margin-top: 32px;
+    }
+  }
+  &__item {
+    height: 100%;
+    overflow: hidden;
+    background: $white;
+    border-radius: $br-12;
+    border: 1px solid $stroke-hard;
+    box-shadow: 1px 1px 8px 1px rgba(12, 43, 90, 0.06);
+    display: flex;
+    flex-direction: column;
+    transition: all .2s;
+    h3 {
+      a {
+        color: $primary;
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+    &:hover {
+      box-shadow: 1px 1px 24px 2px rgba(12, 43, 90, 0.16);
+    }
+    .paragraph {
+      display: none;
+      margin-top: 16px;
+      font-size: $fz-13;
+      line-height: 1.53;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &__img {
+    height: 200px;
+    display: block;
+    position: relative;
+    transition: initial;
+  }
+  &__logo {
+    display: none;
+    padding: 8px 20px;
+    background: $white;
+    position: absolute;
+    border-radius: $br-12;
+    right: 8px;bottom: 8px;
+    width: 180px;height: 56px;
+    align-items: center;
+    justify-content: center;
+    img {
+      display: block;
+      max-height: 100%;
+    }
+  }
+  &__body {
+    padding: 24px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+  }
+  &__school {
+    margin-top: 8px;
+    line-height: 1.066;
+    a {
+      color: $accent;
+      font-size: $fz-14;
+      &:hover {
+        color: $accent-hover;
+      }
+    }
+  }
+  &__credit {
+    line-height: 1.2;
+    margin-top: 24px;
+    font-weight: $medium;
+  }
+  &__price {
+    margin-top: 6px;
+    line-height: 1.2;
+    font-size: $fz-22;
+    font-weight: $semibold;
+    display: flex;
+    align-items: center;
+    span {
+      top: 1px;
+      color: $secondary;
+      font-size: $fz-16;
+      position: relative;
+      margin-left: 12px;
+      &:after {
+        height: 1px;
+        margin-top: -1px;
+        background: $red;
+        @include pseudo-elements;
+        top: 50%;left: 0;right: 0;
+        transform: rotate(-7deg)
+      }
+    }
+  }
+  &__term {
+    margin-top: 6px;
+    color: $secondary;
+    font-size: $fz-13;
+    line-height: 1.53;
+  }
+  &__item {
+    .stars {
+      margin-top: 22px;
+      flex: 1 0 auto;
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+  &__more {
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid $stroke-soft;
+    a {
+      color: $accent;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      svg {
+        width: 24px;height: 24px;
+        path {
+          stroke: $accent;
+          transition: all .2s;
+        }
+      }
+      &:hover {
+        color: $accent-hover;
+        svg {
+          path {
+            stroke: $accent-hover;
+          }
+        }
+      }
+    }
+  }
+  &__sl {
+    .catalog__item {
+      height: auto;
+    }
+  }
+}
+
+// Media max
+@media (max-width: $xl) {
+  .catalog {
+    &__group {
+      margin-left: -4px;
+      margin-right: -4px;
+      [class*='col-'] {
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+    }
+    &__body {
+      padding: 16px 16px 9px;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .catalog {
+    padding-top: 32px;
+    &__sl {
+      .catalog__item {
+        width: 280px;
+      }
+    }
+    &__group {
+      margin-top: 16px;
+      [class*='col-'] {
+        margin-top: 8px;
+      }
+    }
+    &__img {
+      height: 130px;
+    }
+    &__school {
+      a {
+        font-size: $fz-13;
+      }
+    }
+    &__credit {
+      margin-top: 20px;
+      font-size: $fz-15;
+    }
+    &__price {
+      font-size: $fz-20;
+    }
+    &__term {
+      font-size: $fz-12;
+    }
+    &__item {
+      .stars {
+        margin-top: 20px;
+      }
+    }
+    &__more {
+      margin-top: 20px;
+      padding-top: 8px;
+    }
+  }
+}
+
+@media (max-width: $mob) {
+  .catalog {
+    &__group {
+      .catalog__item {
+        h3 {
+          font-size: $fz-13;
+        }
+      }
+      .catalog__img {
+        height: 100px;
+      }
+      .catalog__body {
+        padding: 12px 12px 9px
+      }
+      .catalog__school {
+        a {
+          font-size: $fz-12;
+        }
+      }
+      .catalog__credit {
+        margin-top: 16px;
+        font-size: $fz-12;
+      }
+      .catalog__price {
+        margin-top: 4px;
+        font-size: $fz-16;
+        span {
+          top: 0;
+          margin-left: 8px;
+          font-size: $fz-10;
+        }
+      }
+      .catalog__term {
+        span {
+          display: none;
+        }
+      }
+      .stars {
+        margin-top: 12px;
+        &__rating {
+          font-size: $fz-16;
+          margin-right: 8px;
+        }
+        &__body {
+          i {
+            &:not(:first-child) {
+              display: none;
+            }
+          }
+        }
+        &__quantity {
+          top: 2px;
+          margin-left: 8px;
+          font-size: $fz-12;
+          position: relative;
+        }
+      }
+      .catalog__more {
+        margin-top: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mob-x) {
+  .catalog {
+    &__group {
+      [class*='col-'] {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .catalog__img {
+        height: 140px;
+      }
+    }
+  }
+}
+
+// Media min
+@media (min-width: $min-lg) {
+  .catalog {
+    &__group {
+      &--row {
+        [class*='col-'] {
+          flex: 0 0 100% !important;
+          max-width: 100% !important;
+        }
+        .catalog__item {
+          padding: 32px;
+          flex-direction: row;
+        }
+        .catalog__img {
+          width: 240px;
+          min-height: 220px;
+          margin-right: 24px;
+          border-radius: $br-12;
+          height: 100% !important;
+          flex-shrink: 0;
+        }
+        .catalog__logo {
+          display: flex;
+        }
+        .catalog__body {
+          position: relative;
+          max-width: 100%;width: 100%;
+          padding: 0 290px 69px 0 !important;
+          flex: initial;
+          h3 {
+            a {
+              font-size: $fz-20 !important;
+            }
+          }
+          .paragraph {
+            display: -webkit-box;
+          }
+        }
+        .catalog__school {
+          display: none;
+        }
+        .catalog__credit,
+        .catalog__price,
+        .catalog__term,
+        .stars {
+          left: 350px;
+          margin-top: 0;
+        }
+        .catalog__credit {
+          top: 0;
+          position: absolute;
+        }
+        .catalog__price {
+          top: 24px;
+          position: absolute;
+        }
+        .catalog__term {
+          top: 53px;
+          position: absolute;
+        }
+        .stars {
+          top: 93px;
+          position: absolute;
+          &__inner {
+            flex-wrap: wrap;
+          }
+          &__quantity {
+            width: 100%;
+            margin: 8px 0 0;
+          }
+        }
+        .catalog__more {
+          border: 0;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          left: 0;right: 0;bottom: 0;
+          a {
+            height: 49px;
+            padding: 0 20px;
+            font-size: $fz-15;
+            font-weight: $medium;
+            border-radius: $br-12;
+            background: $surface-primary;
+            justify-content: center;
+            svg {
+              margin-left: 12px;
+            }
+            &:hover {
+              color: $white;
+              background: $accent;
+              svg {
+                path {
+                  stroke: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $min-xl) {
+  .catalog {
+    &__group {
+      &--small {
+        .catalog__item {
+          h3 {
+            line-height: 1.1;
+            a {
+              font-size: $fz-16;
+            }
+          }
+        }
+        .catalog__img {
+          height: 160px;
+        }
+        .catalog__body {
+          padding: 16px;
+        }
+        .catalog__credit {
+          font-size: $fz-14;
+        }
+        .catalog__price {
+          font-size: $fz-18;
+          span {
+            font-size: $fz-14;
+          }
+        }
+        .stars__rating {
+          font-size: $fz-16;
+        }
+        .catalog__more {
+          a {
+            font-size: $fz-15;
+          }
+        }
+      }
+      &--row {
+        .catalog__body {
+          padding: 0 240px 69px 0 !important;
+        }
+      }
+    }
+  }
+}

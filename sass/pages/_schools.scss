@@ -1,0 +1,239 @@
+// Schools
+.p-schools {
+  &__panel {
+    .form {
+      max-width: 100%;width: 100%;
+    }
+    .select {
+      margin-left: 13px;
+      flex-shrink: 0;
+    }
+  }
+  &__item {
+    padding: 32px;
+    margin-top: 32px;
+    border-radius: $br-12;
+    border: 1px solid $stroke-hard;
+    box-shadow: 1px 1px 8px 1px rgba(12, 43, 90, 0.06);
+  }
+  &__head {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $stroke-soft;
+  }
+  &__logo {
+    max-width: 190px;width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  &__name {
+    margin: 0 auto 0 24px;
+    display: flex;
+    align-items: center;
+    &:before {
+      content: " ";
+      margin-right: 24px;
+      border-radius: 50%;
+      background: #E4EBF3;
+      width: 5px;height: 5px;
+      flex-shrink: 0;
+    }
+    a {
+      color: $accent;
+      font-size: $fz-20;
+      font-weight: $semibold;
+      &:hover {
+        color: $accent-hover;
+      }
+    }
+  }
+  &__btns {
+    margin-left: 30px;
+    .btn {
+      padding-top: 1px;
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+      &:last-child {
+        padding-left: 34px;
+        padding-right: 34px;
+      }
+    }
+  }
+  &__info {
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-bottom: 16px;
+    [class*='col-'] {
+      padding: 0 4px;
+      margin-bottom: 8px;
+    }
+    &-item {
+      height: 100%;
+      padding: 16px;
+      border-radius: $br-12;
+      display: flex;
+      flex-direction: column;
+      &--1 {
+        background: $surface-primary;
+      }
+      &--2 {
+        background: rgba(238, 231, 255, 0.4);
+      }
+      &--3 {
+        background: rgba(255, 250, 221, 0.6);
+      }
+      &--4 {
+        background: rgba(225, 248, 244, 0.5);
+      }
+      > span {
+        display: block;
+        line-height: 1.3;
+        font-size: $fz-18;
+        margin-bottom: 4px;
+        font-weight: $medium;
+        font-family: $font-secondary;
+        flex: 1 0 auto;
+      }
+      > p {
+        font-size: $fz-14;
+        line-height: 1.714;
+      }
+    }
+  }
+  .paragraph {
+    margin-bottom: 16px;
+  }
+}
+
+// Media max
+@media (max-width: $xl) {
+  .p-schools {
+    &__item {
+      padding: 16px;
+    }
+    &__logo {
+      max-width: 140px;
+    }
+    &__name {
+      a {
+        font-size: $fz-15;
+      }
+    }
+    &__btns {
+      .btn {
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .p-schools {
+    &__panel {
+      margin-bottom: 32px;
+    }
+    &__item {
+      margin-top: 20px;
+    }
+    &__panel {
+      .select {
+        width: 100%;
+        margin: 8px 0 0;
+      }
+    }
+    &__head {
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+    }
+    &__logo {
+      max-width: 114px;
+    }
+    &__name {
+      margin-right: 0;
+      &:before {
+        display: none;
+      }
+    }
+    &__btns {
+      width: 100%;
+      margin: 14px 0 0;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      .btn {
+        width: calc(50% - 2.5px);
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+        &:first-child {
+          span {
+            display: none;
+          }
+        }
+        &:last-child {
+          padding: 0 10px;
+        }
+      }
+    }
+    &__info {
+      margin-bottom: 8px;
+      &-item {
+        padding: 8px;
+        display: block;
+        > span {
+          font-size: $fz-13;
+          line-height: normal;
+        }
+        > p {
+          font-size: $fz-11;
+          line-height: 1.45;
+        }
+      }
+      .stars {
+        &__rating {
+          font-size: $fz-13;
+        }
+        i {
+          &:not(:first-child) {
+            display: none;
+          }
+        }
+      }
+    }
+    .paragraph {
+      line-height: 1.53;
+      margin-bottom: 8px;
+    }
+    .tags {
+      padding-left: 16px;
+      margin-left: -16px;
+      padding-right: 16px;
+      margin-right: -16px;
+    }
+  }
+}
+
+@media (max-width: $mob-x) {
+  .p-schools {
+    &__btns {
+      flex-wrap: wrap;
+      .btn {
+        width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+    &__info {
+      &-item {
+        > span {
+          font-size: $fz-11;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// Faq
+.faq {
+  padding-top: 80px;
+}
+
+// Media max
+@media (max-width: $lg) {
+  .faq {
+    padding-top: 32px;
+    .title {
+      margin-bottom: 32px;
+    }
+  }
+}
