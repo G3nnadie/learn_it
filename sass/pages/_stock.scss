@@ -1,0 +1,84 @@
+// Stock
+.stock {
+  .row {
+    [class*='col-'] {
+      margin-top: 32px;
+    }
+  }
+  &__item {
+    border-radius: $br-12;
+    padding: 24px 24px 16px;
+    border: 1px solid $stroke-hard;
+    box-shadow: 1px 1px 8px 1px rgba(12, 43, 90, 0.06);
+    transition: all .2s;
+    .catalog__school {
+      line-height: normal;
+    }
+    h3 {
+      margin-top: 24px;
+    }
+    .paragraph {
+      margin-top: 8px;
+      font-size: $fz-13;
+      line-height: 1.53;
+      color: $secondary;
+    }
+    &:hover {
+      box-shadow: 1px 1px 24px 2px rgba(12, 43, 90, 0.16);
+    }
+  }
+  &__logo {
+    max-width: 95px;
+    max-height: 20px;
+  }
+  .catalog__info {
+    margin-top: 8px;
+  }
+  .catalog__school {
+    margin-right: auto;
+  }
+  &__time {
+    margin-top: 24px;
+    line-height: 1.4;
+    color: $secondary;
+    font-size: $fz-13;
+    svg {
+      margin-right: 10px;
+      width: 18px;height: 18px;
+      flex-shrink: 0;
+    }
+  }
+  &__btn {
+    margin-top: 24px;
+  }
+}
+
+// Media max
+@media (max-width: $lg) {
+  .stock {
+    .p-schools__panel {
+      margin-bottom: 0 !important;
+    }
+    &__item {
+      padding: 16px;
+      h3 {
+        margin-top: 12px;
+      }
+      .paragraph {
+        font-size: $fz-12;
+        line-height: 1.66;
+      }
+    }
+    &__time {
+      margin-top: 16px;
+      line-height: 1.5;
+      font-size: $fz-12;
+      svg {
+        width: 16px;height: 16px;
+      }
+    }
+    &__btn {
+      margin-top: 16px;
+    }
+  }
+}

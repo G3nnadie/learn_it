@@ -7695,5 +7695,63 @@ h3 {
     margin-left: 12px; }
   .course__reviews-sl .reviews__source {
     margin-top: 12px; } }
+.stock .row [class*='col-'] {
+  margin-top: 32px; }
+.stock__item {
+  border-radius: 12px;
+  padding: 24px 24px 16px;
+  border: 1px solid #DFE8F2;
+  box-shadow: 1px 1px 8px 1px rgba(12, 43, 90, 0.06);
+  transition: all .2s; }
+  .stock__item .catalog__school {
+    line-height: normal; }
+  .stock__item h3 {
+    margin-top: 24px; }
+  .stock__item .paragraph {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.53;
+    color: #6F7A90; }
+  .stock__item:hover {
+    box-shadow: 1px 1px 24px 2px rgba(12, 43, 90, 0.16); }
+.stock__logo {
+  max-width: 95px;
+  max-height: 20px; }
+.stock .catalog__info {
+  margin-top: 8px; }
+.stock .catalog__school {
+  margin-right: auto; }
+.stock__time {
+  margin-top: 24px;
+  line-height: 1.4;
+  color: #6F7A90;
+  font-size: 13px; }
+  .stock__time svg {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0; }
+.stock__btn {
+  margin-top: 24px; }
+
+@media (max-width: 991px) {
+  .stock .p-schools__panel {
+    margin-bottom: 0 !important; }
+  .stock__item {
+    padding: 16px; }
+    .stock__item h3 {
+      margin-top: 12px; }
+    .stock__item .paragraph {
+      font-size: 12px;
+      line-height: 1.66; }
+  .stock__time {
+    margin-top: 16px;
+    line-height: 1.5;
+    font-size: 12px; }
+    .stock__time svg {
+      width: 16px;
+      height: 16px; }
+  .stock__btn {
+    margin-top: 16px; } }
 
 /*# sourceMappingURL=main.css.map */
