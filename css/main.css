@@ -5259,6 +5259,46 @@ h3 {
 @media (max-width: 1199px) {
   .switch__item {
     margin-top: 20px; } }
+.list-default li {
+  padding-left: 20px;
+  position: relative; }
+  .list-default li:not(:last-child) {
+    margin-bottom: 8px; }
+  .list-default li:before {
+    top: 50%;
+    left: 0;
+    border-radius: 50%;
+    background: #3286EE;
+    width: 8px;
+    height: 8px;
+    content: " ";
+    position: absolute;
+    transform: translateY(-50%); }
+
+.table > li {
+  min-height: 54px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .table > li:nth-child(odd) {
+    background: #EFF6FE; }
+.table__head {
+  color: #3286EE;
+  font-weight: 600; }
+.table__cell {
+  width: 100%;
+  padding: 8px 24px; }
+
+@media (max-width: 991px) {
+  .table > li {
+    min-height: 32px;
+    font-size: 11px; }
+  .table__head {
+    font-weight: 400; }
+  .table__cell {
+    padding-left: 12px;
+    padding-right: 12px; } }
 .header {
   z-index: 51;
   padding: 21px 0;
@@ -7753,5 +7793,74 @@ h3 {
       height: 16px; }
   .stock__btn {
     margin-top: 16px; } }
+.profession .paragraph {
+  max-width: 960px;
+  width: 100%; }
+.profession__info-wrap {
+  width: 100%;
+  margin-top: 80px; }
+.profession__info-item {
+  padding: 20px;
+  border-radius: 12px; }
+  .profession__info-item--1 {
+    background: #FFFADD; }
+  .profession__info-item--2 {
+    background: #E1F8F4; }
+  .profession__info-item--3 {
+    background: #EEE7FF; }
+  .profession__info-item p {
+    color: #6F7A90;
+    font-size: 14px;
+    line-height: 1.714; }
+  .profession__info-item span {
+    line-height: 1;
+    display: block;
+    margin-top: 8px;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: "Unbounded", sans-serif; }
+.profession__skills {
+  margin-top: 80px;
+  line-height: 1.75; }
+  .profession__skills h3 {
+    line-height: 1;
+    margin-bottom: 20px;
+    font-family: "Unbounded", sans-serif; }
+  .profession__skills ul {
+    margin-top: 20px;
+    max-width: 940px;
+    width: 100%; }
+.profession__salaries {
+  margin-top: 80px; }
+
+@media (max-width: 991px) {
+  .profession__info-wrap {
+    margin-top: 32px; }
+    .profession__info-wrap .title {
+      margin-bottom: 0 !important; }
+    .profession__info-wrap [class*='col-'] {
+      margin-top: 8px; }
+  .profession__info-item {
+    padding: 8px; }
+    .profession__info-item p {
+      font-size: 11px;
+      line-height: 1.45; }
+    .profession__info-item span {
+      margin-top: 4px;
+      font-size: 16px;
+      line-height: 1.25; }
+  .profession .paragraph {
+    margin-top: 32px; }
+  .profession__skills {
+    margin-top: 32px; }
+    .profession__skills .title {
+      margin-bottom: 16px; }
+    .profession__skills ul {
+      font-size: 12px;
+      line-height: 1.66; }
+  .profession__salaries {
+    margin-top: 32px; }
+    .profession__salaries .title {
+      margin-bottom: 24px; } }
 
 /*# sourceMappingURL=main.css.map */

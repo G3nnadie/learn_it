@@ -1,0 +1,102 @@
+// Profession
+.profession {
+  .paragraph {
+    max-width: 960px;width: 100%;
+  }
+  &__info {
+    &-wrap {
+      width: 100%;
+      margin-top: 80px;
+    }
+    &-item {
+      padding: 20px;
+      border-radius: $br-12;
+      &--1 {
+        background: $surface-tertiary;
+      }
+      &--2 {
+        background: $surface-quatery;
+      }
+      &--3 {
+        background: $surface-secondary;
+      }
+      p {
+        color: $secondary;
+        font-size: $fz-14;
+        line-height: 1.714;
+      }
+      span {
+        line-height: 1;
+        display: block;
+        margin-top: 8px;
+        font-size: $fz-24;
+        font-weight: $medium;
+        font-family: $font-secondary;
+      }
+    }
+  }
+  &__skills {
+    margin-top: 80px;
+    line-height: 1.75;
+    h3 {
+      line-height: 1;
+      margin-bottom: 20px;
+      font-family: $font-secondary;
+    }
+    ul {
+      margin-top: 20px;
+      max-width: 940px;width: 100%;
+    }
+  }
+  &__salaries {
+    margin-top: 80px;
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .profession {
+    &__info {
+      &-wrap {
+        margin-top: 32px;
+        .title {
+          margin-bottom: 0 !important;
+        }
+        [class*='col-'] {
+          margin-top: 8px;
+        }
+      }
+      &-item {
+        padding: 8px;
+        p {
+          font-size: $fz-11;
+          line-height: 1.45;
+        }
+        span {
+          margin-top: 4px;
+          font-size: $fz-16;
+          line-height: 1.25;
+        }
+      }
+    }
+    .paragraph {
+      margin-top: 32px;
+    }
+    &__skills {
+      margin-top: 32px;
+      .title {
+        margin-bottom: 16px;
+      }
+      ul {
+        font-size: $fz-12;
+        line-height: 1.66;
+      }
+    }
+    &__salaries {
+      margin-top: 32px;
+      .title {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

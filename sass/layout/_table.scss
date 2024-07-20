@@ -1,0 +1,38 @@
+// Table
+.table {
+  > li {
+    min-height: 54px;
+    border-radius: $br-8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:nth-child(odd) {
+      background: $surface-primary;
+    }
+  }
+  &__head {
+    color: $accent;
+    font-weight: $semibold;
+  }
+  &__cell {
+    width: 100%;
+    padding: 8px 24px;
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .table {
+    > li {
+      min-height: 32px;
+      font-size: $fz-11;
+    }
+    &__head {
+      font-weight: $regular;
+    }
+    &__cell {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+}
