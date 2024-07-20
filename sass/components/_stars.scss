@@ -18,7 +18,7 @@
     display: flex;
     i {
       width: 19px;height: 19px;
-      background: url(../img/svg/i-star-off.svg);
+      background: url(../img/svg/i-star-off.svg) center/contain no-repeat;
       flex-shrink: 0;
       &:not(:last-child) {
         margin-right: 4px;
@@ -29,7 +29,7 @@
       overflow: hidden;
       position: absolute;
       i {
-        background: url(../img/svg/i-star-on.svg);
+        background: url(../img/svg/i-star-on.svg) center/contain no-repeat;
       }
     }
   }

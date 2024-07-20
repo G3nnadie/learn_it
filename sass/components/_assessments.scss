@@ -1,0 +1,52 @@
+// Assessments
+.assessments {
+  margin-top: 48px;
+  p {
+    font-weight: $medium;
+  }
+  &__row {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .stars__body {
+    flex-shrink: 0;
+  }
+  &__line {
+    height: 6px;
+    margin-left: 12px;
+    position: relative;
+    border-radius: $br-6;
+    max-width: 100%;width: 100%;
+    background: $surface-primary;
+    i {
+      position: absolute;
+      background: #ACB2BC;
+      border-radius: inherit;
+      top: 0;bottom: 0;left: 0;
+    }
+  }
+  &__data {
+    top: -1px;
+    width: 35px;
+    line-height: 1;
+    margin-left: 12px;
+    position: relative;
+    font-weight: $medium;
+    flex-shrink: 0;
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .assessments {
+    margin-top: 16px;
+    p {
+      font-size: $fz-16;
+    }
+    &__data {
+      font-size: $fz-16;
+    }
+  }
+}

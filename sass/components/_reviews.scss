@@ -85,7 +85,8 @@
       }
     }
     &--like {
-      &:hover {
+      &:hover,
+      &--active {
         color: $success;
         svg {
           path {
@@ -95,7 +96,8 @@
       }
     }
     &--dislike {
-      &:hover {
+      &:hover,
+      &--active {
         color: $danger;
         svg {
           path {
@@ -103,6 +105,28 @@
           }
         }
       }
+    }
+  }
+  &__source {
+    margin-top: 20px;
+    svg {
+      margin-right: 4px;
+      width: 24px;height: 24px;
+      flex-shrink: 0;
+      transition: all .2s;
+    }
+    &-link {
+      font-size: $fz-14;
+      color: $secondary;
+      &:hover svg {
+        transform: rotate(45deg);
+      }
+    }
+    &-logo {
+      max-width: 70px;
+      margin-left: 20px;
+      max-height: 20px;
+      flex-shrink: 0;
     }
   }
 }

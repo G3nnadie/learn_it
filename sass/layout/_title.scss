@@ -16,6 +16,9 @@ h3 {
   margin-right: auto;
   margin-bottom: 32px;
   font-family: $font-secondary;
+  &--mb {
+    margin-bottom: 24px;
+  }
 }
 
 // Media max
@@ -46,5 +49,8 @@ h3 {
   }
   .title {
     margin-bottom: 24px;
+    &--mb {
+      margin-bottom: 16px;
+    }
   }
 }

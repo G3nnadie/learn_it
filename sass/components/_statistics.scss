@@ -2,6 +2,10 @@
 .statistics {
   margin-left: auto;
   max-width: 280px;width: 100%;
+  h3 {
+    margin-bottom: 16px;
+    font-family: $font-secondary;
+  }
   .stars {
     margin-bottom: 32px;
     &__inner {

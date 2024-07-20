@@ -69,7 +69,6 @@
     flex: 1 0 auto;
   }
   &__school {
-    margin-top: 8px;
     line-height: 1.066;
     a {
       color: $accent;
@@ -85,7 +84,7 @@
     font-weight: $medium;
   }
   &__price {
-    margin-top: 6px;
+    margin-top: 8px;
     line-height: 1.2;
     font-size: $fz-22;
     font-weight: $semibold;
@@ -108,42 +107,37 @@
     }
   }
   &__term {
-    margin-top: 6px;
+    margin-top: 8px;
     color: $secondary;
     font-size: $fz-13;
     line-height: 1.53;
   }
   &__item {
     .stars {
-      margin-top: 22px;
+      margin-top: 6px;
       flex: 1 0 auto;
       display: flex;
       align-items: flex-end;
     }
   }
+  &__info {
+    margin-top: 24px;
+    &-item {
+      font-size: $fz-14;
+      margin-left: 20px;
+      i {
+        margin-right: 8px;
+        width: 20px;height: 20px;
+        flex-shrink: 0;
+      }
+    }
+  }
   &__more {
     margin-top: 24px;
-    padding-top: 12px;
-    border-top: 1px solid $stroke-soft;
-    a {
-      color: $accent;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      svg {
-        width: 24px;height: 24px;
-        path {
-          stroke: $accent;
-          transition: all .2s;
-        }
-      }
-      &:hover {
-        color: $accent-hover;
-        svg {
-          path {
-            stroke: $accent-hover;
-          }
-        }
+    .btn {
+      height: 40px;
+      &:not(:last-child) {
+        margin-bottom: 8px;
       }
     }
   }
@@ -208,9 +202,22 @@
         margin-top: 20px;
       }
     }
+    .catalog__info {
+      margin-top: 20px;
+      flex-wrap: wrap;
+      .catalog__school {
+        width: 100%;
+        margin-bottom: 8px;
+      }
+      &-item {
+        margin-left: 0;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+    }
     &__more {
       margin-top: 20px;
-      padding-top: 8px;
     }
   }
 }
