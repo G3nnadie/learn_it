@@ -182,4 +182,22 @@ $(document).ready(function () {
     },
   });
 
+  // Course reviews sl
+  var swiper = new Swiper(".course__reviews-sl", {
+    spaceBetween: 8,
+    slidesPerView: 'auto',
+    observer: true,
+    observeSlideChildren: true,
+    observeParents: true,
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+      },
+      1200: {
+        spaceBetween: 32,
+        slidesPerView: 2,
+      }
+    },
+  });
+
 });
