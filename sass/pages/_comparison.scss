@@ -1,0 +1,226 @@
+// Comparison
+.comparison {
+  &__clear {
+    &-btn {
+      line-height: 1;
+      color: $primary;
+      font-size: $fz-14;
+      font-weight: $medium;
+      font-family: $font-primary;
+      svg {
+        margin-right: 8px;
+        width: 10px;height: 10px;
+        flex-shrink: 0;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__sl {
+    margin-top: 44px;
+    position: relative;
+    .catalog__item {
+      position: relative;
+    }
+    .catalog__img {
+      pointer-events: none;
+    }
+    .swiper-button {
+      top: 76px;
+      margin-top: 0;
+    }
+  }
+  &__item {
+    &:first-child {
+      .comparison__info-row {
+        &:after {
+          z-index: -1;
+          width: 999em;
+          pointer-events: none;
+          border-radius: inherit;
+          @include pseudo-elements;
+          background: inherit;
+          top: 0;bottom: 0;left: 0;
+        }
+      }
+    }
+    &:not(:first-child) {
+      .comparison__info {
+        &-name {
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+  &__info {
+    margin-top: 32px;
+    &-name {
+      margin: 16px 0;
+      font-weight: $semibold;
+    }
+    &-row {
+      min-height: 60px;
+      padding: 8px 24px;
+      position: relative;
+      border-radius: $br-8;
+      background: $surface-primary;
+      display: flex;
+      align-items: center;
+    }
+    &-school {
+      color: $accent;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .catalog__info {
+      &-item {
+        &:first-child {
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+  .reviews__item {
+    padding: 16px;
+    .stars__rating {
+      font-size: $fz-20;
+    }
+    .stars__row i {
+      width: 22px;height: 22px;
+    }
+    .reviews__info {
+      margin-top: 12px;
+      strong,
+      p {
+        font-size: $fz-14;
+      }
+    }
+    .reviews__body {
+      h3 {
+        font-size: $fz-16;
+      }
+      .reviews__row span {
+        font-size: $fz-14;
+      }
+    }
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .comparison {
+    &__clear {
+      &-btn {
+        svg {
+          width: 8px;height: 8px;
+        }
+      }
+    }
+    &__sl {
+      margin-top: 16px;
+      .swiper-button {
+        top: 38px;
+      }
+      .catalog__img {
+        height: 100px;
+      }
+      .catalog__body {
+        padding: 12px;
+        h3 {
+          font-size: $fz-13;
+          line-height: normal;
+        }
+      }
+      .catalog__more {
+        margin-top: 12px;
+        .btn {
+          padding: 0 8px;
+          font-size: $fz-12;
+          svg {
+            margin-left: 6px;
+          }
+        }
+      }
+    }
+    &__info {
+      margin-top: 16px;
+      &-name {
+        font-size: $fz-14;
+      }
+      &-row {
+        padding: 4px 8px;
+        font-size: $fz-12;
+        min-height: 42px;
+      }
+      .catalog__price {
+        font-size: $fz-22;
+        line-height: normal;
+        display: block;
+        span {
+          top: -1px;
+          display: table;
+          margin-left: 0;
+        }
+      }
+    }
+    .reviews__item {
+      padding: 12px 8px;
+      .stars__rating {
+        top: 1px;
+        font-size: 16px;
+      }
+      .stars__row i {
+        width: 16px;height: 16px;
+      }
+      .reviews__info {
+        margin-top: 8px;
+        display: block !important;
+        strong {
+          font-size: $fz-11;
+        }
+        p {
+          font-size: $fz-12;
+          margin: 4px 0 0 !important;
+        }
+      }
+      .reviews__body {
+        margin-top: 12px;
+        h3 {
+          font-size: $fz-13;
+        }
+        .reviews__row {
+          margin-top: 12px;
+          span {
+            font-size: $fz-11;
+          }
+          p {
+            margin-top: 4px;
+            font-size: $fz-11;
+          }
+        }
+      }
+      .reviews__bott {
+        flex-wrap: wrap;
+        span {
+          width: 100%;
+          margin-bottom: 8px;
+        }
+        .reviews__button {
+          margin-left: 0;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $min-mob-x) {
+  .comparison {
+    &__item {
+      width: 230px !important;
+    }
+  }
+}

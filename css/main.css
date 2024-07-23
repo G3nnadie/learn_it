@@ -5299,6 +5299,34 @@ h3 {
   .table__cell {
     padding-left: 12px;
     padding-right: 12px; } }
+.swiper-button {
+  background: #fff;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px; }
+  .swiper-button:after {
+    display: none; }
+  .swiper-button svg {
+    width: 26px;
+    height: 26px; }
+    .swiper-button svg path {
+      transition: all .2s; }
+  .swiper-button-next {
+    right: 8px; }
+  .swiper-button-prev {
+    left: 8px; }
+  .swiper-button:hover {
+    background: #3286EE; }
+    .swiper-button:hover svg path {
+      stroke: #fff; }
+
+@media (max-width: 991px) {
+  .swiper-button {
+    width: 32px;
+    height: 32px; }
+    .swiper-button svg {
+      width: 16px;
+      height: 16px; } }
 .header {
   z-index: 51;
   padding: 21px 0;
@@ -6084,6 +6112,20 @@ h3 {
         margin-bottom: 8px; }
   .catalog__sl .catalog__item {
     height: auto; }
+  .catalog__remove {
+    z-index: 2;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+    top: 8px;
+    right: 8px;
+    width: 40px;
+    height: 40px; }
+    .catalog__remove svg {
+      width: 24px;
+      height: 24px; }
+    .catalog__remove:hover {
+      background: #EAEEF5; }
 
 @media (max-width: 1199px) {
   .catalog__group {
@@ -6127,7 +6169,15 @@ h3 {
         .catalog .catalog__info-item:not(:last-child) {
           margin-right: 20px; }
     .catalog__more {
-      margin-top: 20px; } }
+      margin-top: 20px; }
+    .catalog__remove {
+      top: 4px;
+      right: 4px;
+      width: 24px;
+      height: 24px; }
+      .catalog__remove svg {
+        width: 16px;
+        height: 16px; } }
 @media (max-width: 479px) {
   .catalog__group .catalog__item h3 {
     font-size: 13px; }
@@ -7862,5 +7912,154 @@ h3 {
     margin-top: 32px; }
     .profession__salaries .title {
       margin-bottom: 24px; } }
+.comparison__clear-btn {
+  line-height: 1;
+  color: #25224A;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif; }
+  .comparison__clear-btn svg {
+    margin-right: 8px;
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0; }
+  .comparison__clear-btn:hover {
+    text-decoration: underline; }
+.comparison__sl {
+  margin-top: 44px;
+  position: relative; }
+  .comparison__sl .catalog__item {
+    position: relative; }
+  .comparison__sl .catalog__img {
+    pointer-events: none; }
+  .comparison__sl .swiper-button {
+    top: 76px;
+    margin-top: 0; }
+.comparison__item:first-child .comparison__info-row:after {
+  z-index: -1;
+  width: 999em;
+  pointer-events: none;
+  border-radius: inherit;
+  content: " ";
+  position: absolute;
+  background: inherit;
+  top: 0;
+  bottom: 0;
+  left: 0; }
+.comparison__item:not(:first-child) .comparison__info-name {
+  opacity: 0;
+  pointer-events: none; }
+.comparison__info {
+  margin-top: 32px; }
+  .comparison__info-name {
+    margin: 16px 0;
+    font-weight: 600; }
+  .comparison__info-row {
+    min-height: 60px;
+    padding: 8px 24px;
+    position: relative;
+    border-radius: 8px;
+    background: #EFF6FE;
+    display: flex;
+    align-items: center; }
+  .comparison__info-school {
+    color: #3286EE; }
+    .comparison__info-school:hover {
+      text-decoration: underline; }
+  .comparison__info .catalog__info-item:first-child {
+    margin-left: 0 !important; }
+.comparison .reviews__item {
+  padding: 16px; }
+  .comparison .reviews__item .stars__rating {
+    font-size: 20px; }
+  .comparison .reviews__item .stars__row i {
+    width: 22px;
+    height: 22px; }
+  .comparison .reviews__item .reviews__info {
+    margin-top: 12px; }
+    .comparison .reviews__item .reviews__info strong,
+    .comparison .reviews__item .reviews__info p {
+      font-size: 14px; }
+  .comparison .reviews__item .reviews__body h3 {
+    font-size: 16px; }
+  .comparison .reviews__item .reviews__body .reviews__row span {
+    font-size: 14px; }
+
+@media (max-width: 991px) {
+  .comparison__clear-btn svg {
+    width: 8px;
+    height: 8px; }
+  .comparison__sl {
+    margin-top: 16px; }
+    .comparison__sl .swiper-button {
+      top: 38px; }
+    .comparison__sl .catalog__img {
+      height: 100px; }
+    .comparison__sl .catalog__body {
+      padding: 12px; }
+      .comparison__sl .catalog__body h3 {
+        font-size: 13px;
+        line-height: normal; }
+    .comparison__sl .catalog__more {
+      margin-top: 12px; }
+      .comparison__sl .catalog__more .btn {
+        padding: 0 8px;
+        font-size: 12px; }
+        .comparison__sl .catalog__more .btn svg {
+          margin-left: 6px; }
+  .comparison__info {
+    margin-top: 16px; }
+    .comparison__info-name {
+      font-size: 14px; }
+    .comparison__info-row {
+      padding: 4px 8px;
+      font-size: 12px;
+      min-height: 42px; }
+    .comparison__info .catalog__price {
+      font-size: 22px;
+      line-height: normal;
+      display: block; }
+      .comparison__info .catalog__price span {
+        top: -1px;
+        display: table;
+        margin-left: 0; }
+  .comparison .reviews__item {
+    padding: 12px 8px; }
+    .comparison .reviews__item .stars__rating {
+      top: 1px;
+      font-size: 16px; }
+    .comparison .reviews__item .stars__row i {
+      width: 16px;
+      height: 16px; }
+    .comparison .reviews__item .reviews__info {
+      margin-top: 8px;
+      display: block !important; }
+      .comparison .reviews__item .reviews__info strong {
+        font-size: 11px; }
+      .comparison .reviews__item .reviews__info p {
+        font-size: 12px;
+        margin: 4px 0 0 !important; }
+    .comparison .reviews__item .reviews__body {
+      margin-top: 12px; }
+      .comparison .reviews__item .reviews__body h3 {
+        font-size: 13px; }
+      .comparison .reviews__item .reviews__body .reviews__row {
+        margin-top: 12px; }
+        .comparison .reviews__item .reviews__body .reviews__row span {
+          font-size: 11px; }
+        .comparison .reviews__item .reviews__body .reviews__row p {
+          margin-top: 4px;
+          font-size: 11px; }
+    .comparison .reviews__item .reviews__bott {
+      flex-wrap: wrap; }
+      .comparison .reviews__item .reviews__bott span {
+        width: 100%;
+        margin-bottom: 8px; }
+      .comparison .reviews__item .reviews__bott .reviews__button {
+        margin-left: 0;
+        margin-right: 12px; } }
+@media (max-width: 375px) {
+  .comparison__item {
+    width: 230px !important; } }
 
 /*# sourceMappingURL=main.css.map */

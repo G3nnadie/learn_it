@@ -200,4 +200,29 @@ $(document).ready(function () {
     },
   });
 
+  // Comparison sl
+  var swiper = new Swiper(".comparison__sl", {
+    spaceBetween: 8,
+    slidesPerView: 'auto',
+    observer: true,
+    observeSlideChildren: true,
+    observeParents: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      375: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1200: {
+        spaceBetween: 32,
+        slidesPerView: 3,
+      }
+    },
+  });
+
 });

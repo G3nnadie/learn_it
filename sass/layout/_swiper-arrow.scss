@@ -1,0 +1,43 @@
+// Swiper arrow
+.swiper {
+  &-button {
+    background: $white;
+    border-radius: $br-12;
+    width: 48px;height: 48px;
+    &:after {
+      display: none;
+    }
+    svg {
+      width: 26px;height: 26px;
+      path {
+        transition: all .2s;
+      }
+    }
+    &-next {
+      right: 8px;
+    }
+    &-prev {
+      left: 8px;
+    }
+    &:hover {
+      background: $accent;
+      svg {
+        path {
+          stroke: $white;
+        }
+      }
+    }
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .swiper {
+    &-button {
+      width: 32px;height: 32px;
+      svg {
+        width: 16px;height: 16px;
+      }
+    }
+  }
+}
