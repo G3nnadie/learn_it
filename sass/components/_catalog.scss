@@ -19,7 +19,10 @@
     display: flex;
     flex-direction: column;
     transition: all .2s;
-    h3 {
+    h2 {
+      font-size: $fz-20;
+    }
+    h3, h2 {
       a {
         color: $primary;
         &:hover {
@@ -173,6 +176,11 @@
         padding-right: 4px;
       }
     }
+    &__item {
+      h2 {
+        font-size: $fz-18;
+      }
+    }
     &__body {
       padding: 16px 16px 9px;
     }
@@ -212,6 +220,9 @@
       font-size: $fz-12;
     }
     &__item {
+      h2 {
+        font-size: $fz-16;
+      }
       .stars {
         margin-top: 20px;
       }
