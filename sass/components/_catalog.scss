@@ -20,6 +20,7 @@
     flex-direction: column;
     transition: all .2s;
     h2 {
+      line-height: 1.4;
       font-size: $fz-20;
     }
     h3, h2 {
@@ -163,6 +164,18 @@
       background: $gray;
     }
   }
+  &__group {
+    &--row {
+      .catalog__more {
+        display: flex;
+        justify-content: space-between;
+        .btn {
+          width: calc(50% - 12px);
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+  }
 }
 
 // Media max
@@ -222,6 +235,7 @@
     &__item {
       h2 {
         font-size: $fz-16;
+        line-height: 1.25;
       }
       .stars {
         margin-top: 20px;
@@ -251,6 +265,60 @@
         width: 16px;height: 16px;
       }
     }
+    &__group {
+      &--row {
+        .catalog__more {
+          .btn {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .catalog {
+    &__group {
+      .stars {
+        margin-top: 12px;
+        &__rating {
+          font-size: $fz-16;
+          margin-right: 8px;
+        }
+        &__body {
+          i {
+            &:not(:first-child) {
+              display: none;
+            }
+          }
+        }
+        &__quantity {
+          top: 2px;
+          margin-left: 8px;
+          font-size: $fz-12;
+          position: relative;
+        }
+      }
+    }
+    &__info {
+      flex-wrap: wrap;
+      &-item {
+        margin-right: 20px;
+        margin-left: 0 !important;
+      }
+    }
+    &__school {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    &__more {
+      .btn {
+        svg {
+          width: 20px;height: 20px;
+        }
+      }
+    }
   }
 }
 
@@ -258,7 +326,7 @@
   .catalog {
     &__group {
       .catalog__item {
-        h3 {
+        h3, h2 {
           font-size: $fz-13;
         }
       }
@@ -289,26 +357,6 @@
       .catalog__term {
         span {
           display: none;
-        }
-      }
-      .stars {
-        margin-top: 12px;
-        &__rating {
-          font-size: $fz-16;
-          margin-right: 8px;
-        }
-        &__body {
-          i {
-            &:not(:first-child) {
-              display: none;
-            }
-          }
-        }
-        &__quantity {
-          top: 2px;
-          margin-left: 8px;
-          font-size: $fz-12;
-          position: relative;
         }
       }
       .catalog__more {
@@ -361,22 +409,14 @@
           max-width: 100%;width: 100%;
           padding: 0 290px 69px 0 !important;
           flex: initial;
-          h3 {
-            a {
-              font-size: $fz-20 !important;
-            }
-          }
           .paragraph {
             display: -webkit-box;
           }
         }
-        .catalog__school {
-          display: none;
-        }
         .catalog__credit,
         .catalog__price,
         .catalog__term,
-        .stars {
+        .catalog__info {
           left: 350px;
           margin-top: 0;
         }
@@ -393,15 +433,20 @@
           position: absolute;
         }
         .stars {
-          top: 93px;
+          margin-top: 16px;
+        }
+        .catalog__info {
+          top: 90px;
+          flex-wrap: wrap;
           position: absolute;
-          &__inner {
-            flex-wrap: wrap;
+          &-item {
+            margin-right: 20px;
+            margin-left: 0 !important;
           }
-          &__quantity {
-            width: 100%;
-            margin: 8px 0 0;
-          }
+        }
+        .catalog__school {
+          width: 100%;
+          margin-bottom: 8px;
         }
         .catalog__more {
           border: 0;
@@ -411,24 +456,6 @@
           left: 0;right: 0;bottom: 0;
           a {
             height: 49px;
-            padding: 0 20px;
-            font-size: $fz-15;
-            font-weight: $medium;
-            border-radius: $br-12;
-            background: $surface-primary;
-            justify-content: center;
-            svg {
-              margin-left: 12px;
-            }
-            &:hover {
-              color: $white;
-              background: $accent;
-              svg {
-                path {
-                  stroke: $white;
-                }
-              }
-            }
           }
         }
       }
@@ -440,14 +467,6 @@
   .catalog {
     &__group {
       &--small {
-        .catalog__item {
-          h3 {
-            line-height: 1.1;
-            a {
-              font-size: $fz-16;
-            }
-          }
-        }
         .catalog__img {
           height: 160px;
         }

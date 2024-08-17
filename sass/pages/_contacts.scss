@@ -1,0 +1,22 @@
+// Сontacts
+.contacts {
+  h3 {
+    margin: 35px 0 20px;
+  }
+  p {
+    strong {
+      font-size: $fz-18;
+    }
+  }
+  ul {
+    li {
+      a {
+        color: inherit;
+        &:hover {
+          color: $accent;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
