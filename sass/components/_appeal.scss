@@ -1,0 +1,26 @@
+// Appeal
+.appeal {
+  width: 320px;
+  top: 0;right: 0;
+  font-size: $fz-14;
+  padding: 30px 20px;
+  position: absolute;
+  border-radius: $br-12;
+  background: $stroke-soft;
+  .title {
+    margin-bottom: 16px;
+  }
+  .btn {
+    margin-top: 15px;
+  }
+  &__like {
+    margin-top: 12px;
+  }
+}
+
+// Media
+@media (max-width: $xl) {
+  .appeal {
+    display: none;
+  }
+}

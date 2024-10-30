@@ -1,0 +1,363 @@
+// Author
+.author {
+  &__wrap {
+    position: relative;
+  }
+  &__body {
+    width: 70%;
+  }
+  &__info {
+    margin-bottom: 48px;
+    &-img {
+      img {
+        width: 100%;
+      }
+    }
+    .stars {
+      margin-bottom: 24px;
+    }
+  }
+  &__panel {
+    top: 4px;
+    margin-left: 30px;
+    position: relative;
+    flex-shrink: 0;
+    &-item {
+      width: 30px;height: 30px;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+      svg {
+        display: block;
+        width: 100%;height: 100%;
+      }
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  &__data {
+    &-item {
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start;
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+    &-name {
+      width: 263px;
+      white-space: nowrap;
+      display: flex;
+      flex-shrink: 0;
+      span {
+        padding-right: 5px;
+        background: $white;
+        position: relative;
+        &:after {
+          z-index: -1;
+          opacity: 0.4;
+          top: 5px;left: 0;
+          font-size: $fz-12;
+          color: $secondary;
+          position: absolute;
+          letter-spacing: 3px;
+          content: "..................................................................................................................................................................................................................................................................................";
+        }
+      }
+    }
+    &-box {
+      z-index: 1;
+      padding-left: 22px;
+      background: $white;
+      position: relative;
+      max-width: 100%;width: 100%;
+      p {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+        span {
+          opacity: 0.5;
+          display: block;
+          font-size: $fz-12;
+        }
+        a {
+          color: $accent;
+          &:hover {
+            color: $accent-hover;
+          }
+        }
+      }
+    }
+    &-tags {
+      a {
+        color: $primary;
+        font-size: $fz-12;
+        margin-bottom: 5px;
+        padding: 2px 5px 2px 13px;
+        background: $surface-primary;
+        border-radius: $br-12 $br-3 $br-3 $br-12;
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+        &:hover {
+          color: $white;
+          background: $accent-hover;
+        }
+      }
+    }
+    &-doc {
+      a {
+        color: $accent;
+        &:hover {
+          color: $accent-hover;
+        }
+      }
+    }
+  }
+  &__courses {
+    margin-top: 56px;
+    .row {
+      margin-top: -8px;
+    }
+    .stars { 
+      &__inner {
+        flex-wrap: wrap;
+      }
+      &__quantity {
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+  &__details {
+    margin-top: 56px;
+    &-text {
+      p {
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+        span {
+          display: block;
+          position: relative;
+          border-radius: $br-12;
+          padding: 16px 16px 16px 68px;
+          border: 1px solid $stroke-hard;
+          &:before {
+            content: "!";
+            color: $white;
+            font-size: $fz-24;
+            border-radius: 50%;
+            position: absolute;
+            top: 16px;left: 16px;
+            font-weight: $semibold;
+            background: $stroke-hard;
+            width: 34px;height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+  &__statistics {
+    margin-top: 56px;
+  }
+  &__reviews {
+    margin-top: 56px;
+    .school__reviews-head {
+      margin-bottom: 20px;
+    }
+  }
+  &__relations {
+    margin-top: 56px;
+    &-inner {
+      p {
+        margin-bottom: 10px;
+        font-weight: $medium;
+      }
+    }
+    &-item {
+      margin-top: 5px;
+      display: flex;
+      a {
+        color: $primary;
+        display: flex;
+        align-items: center;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      i {
+        margin-right: 8px;
+        width: 20px;height: 20px;
+        flex-shrink: 0;
+      }
+    }
+  }
+  &__other {
+    width: 27%;
+    &-item {
+      color: $primary;
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      &:hover {
+        color: $accent-hover;
+      }
+    }
+    &-img {
+      overflow: hidden;
+      margin-right: 12px;
+      border-radius: 50%;
+      width: 60px;height: 60px;
+      flex-shrink: 0;
+      img {
+        width: 100%;height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+    &-info {
+      span {
+        display: block;
+      }
+    }
+    &-desc {
+      margin-top: 4px;
+      line-height: 1.15;
+      font-size: $fz-12;
+      color: $secondary;
+    }
+  }
+}
+
+// Media
+@media (max-width: $xl) {
+  .author {
+    &__body {
+      width: 100%;
+    }
+    &__panel {
+      top: 2px;
+    }
+    &__data {
+      &-name {
+        width: 295px;
+      }
+    }
+    &__other {
+      width: 100%;
+      margin-top: 56px;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .author {
+    .title {
+      margin-bottom: 16px;
+    }
+    &__panel {
+      top: 3px;
+      margin-left: 20px;
+      display: none !important;
+      &-item {
+        width: 20px;height: 20px;
+      }
+    }
+    &__info {
+      margin-bottom: 32px;
+      &-data {
+        padding-left: 10px;
+      }
+      .stars {
+        margin-bottom: 16px;
+      }
+    }
+    &__data {
+      &-item {
+        &:not(:last-child) {
+          margin-bottom: 14px;
+        }
+      }
+      &-name {
+        width: 226px;
+        span {
+          &:after {
+            top: 1px;
+          }
+        }
+      }
+    }
+    &__courses {
+      margin-top: 32px;
+      .row {
+        margin-top: 16px;
+      }
+    }
+    &__details,
+    &__statistics,
+    &__reviews,
+    &__relations,
+    &__other {
+      margin-top: 32px;
+    }
+    &__other {
+      &-item {
+        margin-top: 16px;
+      }
+      &-img {
+        width: 50px;height: 50px;
+      }
+      &-desc {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .author {
+    &__panel {
+      top: 0;
+      margin: 5px 0 0;
+    }
+    &__info {
+      &-data {
+        padding-left: 0;
+        margin-top: 16px;
+      }
+      .stars {
+        margin-bottom: 8px;
+      }
+    }
+    &__data {
+      &-name {
+        width: 120px;
+      }
+      &-box {
+        padding-left: 8px;
+      }
+    }
+    &__courses {
+      .stars { 
+        &__inner {
+          flex-wrap: nowrap;
+        }
+        &__quantity {
+          width: initial;
+          margin-left: 8px;
+        }
+      }
+    }
+    &__relations {
+      .row {
+        [class*='col-']:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}

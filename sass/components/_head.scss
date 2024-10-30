@@ -1,6 +1,7 @@
 // Head
 .head {
   padding: 14px 0;
+  min-height: 74px;
   margin-bottom: 32px;
   border-bottom: 2px solid #E4EBF3;
   &__nav {
@@ -44,6 +45,7 @@
 @media (max-width: $lg) {
   .head {
     padding: 11px 0;
+    min-height: 68px;
     &__nav {
       &-item {
         margin-right: 16px;
